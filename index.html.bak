@@ -158,11 +158,11 @@
         <div class="video-container">
             <video id="desktop-video" class="background-video" autoplay muted playsinline loop>
                 <!-- Горизонтальное видео для десктопов -->
-                <source src="video/land.mp4" type="video/mp4">
+                <source src="http://oasis-trade.ru/upload/video/land.mp4" type="video/mp4">
             </video>
             <video id="mobile-video" class="background-video" autoplay muted playsinline loop>
                 <!-- Вертикальное видео для мобильных -->
-                <source src="video/port.mp4" type="video/mp4">
+                <source src="http://oasis-trade.ru/upload/video/port.mp4" type="video/mp4">
             </video>
             <!-- Прозрачный оверлей для захвата событий -->
             <div class="video-overlay"></div>
