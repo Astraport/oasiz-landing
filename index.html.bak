@@ -68,8 +68,10 @@
             transform: translateY(0%);
         }
 
-        #section2 {
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
+         #section2 {
+            /* Фон по умолчанию для десктопа */
+            background: #4facfe url('/images/back_d.jpg') no-repeat center center;
+            background-size: cover;
             transform: translateY(100%);
         }
 
@@ -81,6 +83,14 @@
         #section4 {
             background: linear-gradient(135deg, #a6c0fe, #f68084);
             transform: translateY(300%);
+        }
+
+        /* Мобильный фон для section2 */
+        @media (max-width: 768px) and (orientation: portrait) {
+            #section2 {
+                background: #4facfe url('/images/back_m.jpg') no-repeat center center;
+                background-size: cover;
+            }
         }
 
         .video-container {
