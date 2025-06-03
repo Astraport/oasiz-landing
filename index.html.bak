@@ -23,6 +23,7 @@
         .container_product {
             width: 100%;
             overflow: hidden;
+			z-index: 2;
         }
 
         .section {
