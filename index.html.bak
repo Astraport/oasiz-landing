@@ -124,8 +124,15 @@
             max-width: 90%;
             object-fit: contain;
             filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-			object-fit: cover;
-			 animation: reveal 3s ease-out forwards;
+object-fit: cover;
+  opacity: 0;
+}
+
+/* Класс для активации анимации */
+.reveal-animate {
+  animation: 
+    reveal 2s ease-out forwards,
+    fade-in 0.1s 2s forwards;
 }
 
 @keyframes reveal {
@@ -136,6 +143,22 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Для браузеров с поддержкой масок */
+@supports (mask-image: linear-gradient(to top, black, black)) {
+  .reveal-image {
+    mask-image: linear-gradient(to top, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 80%, transparent 100%);
+  }
+}
+
+
 
         /* Десктопные изображения */
         #desktop-bg {
@@ -470,6 +493,29 @@
             let currentSection = 0;
             let isAnimating = false;
             let isMuted = true;
+			
+			const images = document.querySelectorAll('.fg-image');
+  
+  // Настройки для Intersection Observer
+  const options = {
+    threshold: 0.1 // Срабатывает при 10% видимости элемента
+  };
+  
+  // Создаем наблюдатель
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Запускаем анимацию
+        entry.target.classList.add('reveal-animate');
+        
+        // Прекращаем наблюдение после запуска
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+  
+  // Начинаем наблюдение для всех изображений
+  images.forEach(img => observer.observe(img));
             
             // Инициализация видео
             function initVideo() {
@@ -501,6 +547,10 @@
                     // На других экранах - останавливаем видео
                     desktopVideo.pause();
                     mobileVideo.pause();
+                }
+				
+				if (currentSection === 1) {
+                    entry.target.classList.add('reveal-animate');
                 }
             }
             
