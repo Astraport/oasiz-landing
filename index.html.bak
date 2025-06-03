@@ -129,7 +129,7 @@
 }
 
 /* Класс активации анимации */
-.reveal-image.animate {
+.fg-image.animate {
   animation: 
     reveal 2s ease-out forwards,
     fade-in 0.1s 2s forwards;
