@@ -278,6 +278,26 @@
                 background: linear-gradient(transparent, rgba(0,0,0,0.9));
             }
         }
+		
+		/* Десктопные изображения */
+#desktop-bg, #desktop-fg {
+    display: block;
+}
+
+/* Мобильные изображения */
+#mobile-bg, #mobile-fg {
+    display: none;
+}
+
+/* Переключение на мобильные изображения */
+@media (max-width: 768px) {
+    #desktop-bg, #desktop-fg {
+        display: none;
+    }
+    #mobile-bg, #mobile-fg {
+        display: block;
+    }
+}
     </style>
 </head>
 <body>
