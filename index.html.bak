@@ -377,7 +377,7 @@
     <!-- Основные изображения (WebP) -->
     <div class="fg-container">
         <img id="desktop-fg" class="fg-image" src="images/desktop-fg.webp">
-        <img id="mobile-fg" class="fg-image" src="images/mobile-fg.png">
+        <img id="mobile-fg" class="fg-image" src="images/mobile-fg.webp">
     </div>
         </section>
         
