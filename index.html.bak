@@ -125,17 +125,15 @@
             object-fit: contain;
             filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
 			object-fit: cover;
-			animation: reveal 2s forwards;
+			 animation: reveal 2s ease-out forwards;
 }
 
 @keyframes reveal {
   0% {
-    mask: linear-gradient(to top, transparent 0%, black 0%);
-    -webkit-mask: linear-gradient(to top, transparent 0%, black 0%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   }
   100% {
-    mask: linear-gradient(to top, transparent 0%, black 100%);
-    -webkit-mask: linear-gradient(to top, transparent 0%, black 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
