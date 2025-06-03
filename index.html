@@ -494,28 +494,6 @@ object-fit: cover;
             let isAnimating = false;
             let isMuted = true;
 			
-			const images = document.querySelectorAll('.fg-image');
-  
-  // Настройки для Intersection Observer
-  const options = {
-    threshold: 0.1 // Срабатывает при 10% видимости элемента
-  };
-  
-  // Создаем наблюдатель
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Запускаем анимацию
-        entry.target.classList.add('reveal-animate');
-        
-        // Прекращаем наблюдение после запуска
-        observer.unobserve(entry.target);
-      }
-    });
-  }, options);
-  
-  // Начинаем наблюдение для всех изображений
-  images.forEach(img => observer.observe(img));
             
             // Инициализация видео
             function initVideo() {
@@ -548,7 +526,13 @@ object-fit: cover;
                     desktopVideo.pause();
                     mobileVideo.pause();
                 }
-			
+				if (currentSection === 1) {
+                    const image = document.getElementById('desktop-fg');
+					image.classList.add('animate');
+					image = document.getElementById('mobile-fg');
+					image.classList.add('animate');
+                }
+
             }
             
             // Переход к определенной секции
