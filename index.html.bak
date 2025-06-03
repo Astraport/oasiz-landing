@@ -69,11 +69,10 @@
             transform: translateY(0%);
         }
 
-         #section2 {
-            /* Фон по умолчанию для десктопа */
-            background: url('https://astraport.github.io/oasiz-landing/images/back_d.jpg') no-repeat center center;
-            background-size: cover;
+        #section2 {
+            /* Общий стиль для фона */
             transform: translateY(100%);
+            overflow: hidden;
         }
 
         #section3 {
@@ -86,12 +85,59 @@
             transform: translateY(300%);
         }
 
-        /* Мобильный фон для section2 */
-        @media (max-width: 768px) and (orientation: portrait) {
-            #section2 {
-                background: url('https://astraport.github.io/oasiz-landing/images/back_m.jpg') no-repeat center center;
-                background-size: cover;
-            }
+   /* Контейнеры для изображений */
+        .bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .fg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        /* Фоновые изображения (JPG) */
+        .bg-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Основные изображения (WebP) */
+        .fg-image {
+            max-height: 80vh;
+            width: auto;
+            max-width: 90%;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        /* Десктопные изображения */
+        #desktop-bg {
+            display: block;
+        }
+        #desktop-fg {
+            display: block;
+        }
+
+        /* Мобильные изображения */
+        #mobile-bg {
+            display: none;
+        }
+        #mobile-fg {
+            display: none;
         }
 
         .video-container {
