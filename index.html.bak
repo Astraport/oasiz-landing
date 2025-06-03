@@ -319,14 +319,14 @@
         <section id="section1" class="section">
            <!-- Фоновые изображения (JPG) -->
     <div class="bg-container">
-        <img id="desktop-bg" class="bg-image" src="/images/desktop-bg.jpg">
-        <img id="mobile-bg" class="bg-image" src="/images/mobile-bg.jpg">
+        <img id="desktop-bg" class="bg-image" src="images/desktop-bg.jpg">
+        <img id="mobile-bg" class="bg-image" src="images/mobile-bg.jpg">
     </div>
     
     <!-- Основные изображения (WebP) -->
     <div class="fg-container">
-        <img id="desktop-fg" class="fg-image" src="/images/desktop-fg.webp">
-        <img id="mobile-fg" class="fg-image" src="/images/mobile-fg.webp">
+        <img id="desktop-fg" class="fg-image" src="images/desktop-fg.webp">
+        <img id="mobile-fg" class="fg-image" src="images/mobile-fg.webp">
     </div>
         </section>
         
