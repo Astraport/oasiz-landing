@@ -20,7 +20,7 @@
             scroll-behavior: smooth;
         }
 
-        .container_producy {
+        .container_product {
             display: block;
 			unicode-bidi: isolate;
             height: 100%;
