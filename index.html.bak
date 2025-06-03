@@ -526,13 +526,14 @@
                     mobileVideo.pause();
                 }
 				if (currentSection === 1) {
-                    const image = document.getElementById('mobile-fg');
-					  
-  if (image) {
-    image.classList.add('animate');
+                    const element = document.getElementById('animated-image');
+  
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    // Мобильная анимация
+    document.getElementById('mobile-fg').classList.add('animate');
   } else {
-    image = document.getElementById('desktop-fg');
-					image.classList.add('animate');
+    // Десктопная анимация
+    document.getElementById('desktop-fg').classList.add('animate');
   }
 					
                 }
