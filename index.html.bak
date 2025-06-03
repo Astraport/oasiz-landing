@@ -231,6 +231,7 @@
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 2px;
             margin-bottom: 40px;
+			position: absolute;
         }
 
         .product-card {
@@ -375,7 +376,7 @@
     
     <!-- Основные изображения (WebP) -->
     <div class="fg-container">
-        <img id="desktop-fg" class="fg-image" src="images/desktop-fg.png">
+        <img id="desktop-fg" class="fg-image" src="images/desktop-fg.webp">
         <img id="mobile-fg" class="fg-image" src="images/mobile-fg.png">
     </div>
         </section>
