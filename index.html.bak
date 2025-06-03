@@ -124,16 +124,16 @@
             max-width: 90%;
             object-fit: contain;
             filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-			animation: slideUp 3s forwards;
+			animation: reveal 3s forwards;
         }
-		@keyframes slideUp {
-  from {
-    transform: translateY(100%); /* Начальное положение (снизу) */
-    opacity: 0.5; /* Опциональная прозрачность */
+		@keyframes reveal {
+  0% {
+    mask: linear-gradient(to top, transparent 0%, black 0%);
+    -webkit-mask: linear-gradient(to top, transparent 0%, black 0%);
   }
-  to {
-    transform: translateY(0); /* Конечное положение */
-    opacity: 1; /* Полная видимость */
+  100% {
+    mask: linear-gradient(to top, transparent 0%, black 100%);
+    -webkit-mask: linear-gradient(to top, transparent 0%, black 100%);
   }
 }
 
