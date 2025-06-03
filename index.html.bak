@@ -131,7 +131,7 @@
 /* Класс активации анимации */
 .fg-image.animate {
   animation: 
-    reveal 4s ease-out forwards,
+    reveal 3s ease-out forwards;
 }
 
 @keyframes reveal {

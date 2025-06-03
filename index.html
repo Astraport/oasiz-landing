@@ -131,8 +131,7 @@
 /* Класс активации анимации */
 .fg-image.animate {
   animation: 
-	fade-in 0.1s 2s forwards,
-    reveal 2s ease-out forwards;
+    reveal 3s ease-out forwards;
 }
 
 @keyframes reveal {
@@ -527,12 +526,12 @@
                     mobileVideo.pause();
                 }
 				if (currentSection === 1) {
-                    const image = document.getElementById('desktop-fg');
+                    const image = document.getElementById('mobile-fg');
 					  
   if (image) {
     image.classList.add('animate');
   } else {
-    image = document.getElementById('mobile-fg');
+    image = document.getElementById('desktop-fg');
 					image.classList.add('animate');
   }
 					
