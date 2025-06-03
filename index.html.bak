@@ -124,7 +124,8 @@
             max-width: 90%;
             object-fit: contain;
             filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-			animation: reveal 3s forwards;
+			opacity: 0;
+			animation: reveal 2s forwards, fade-in 0.1s 2s forwards;
         }
 		@keyframes reveal {
   0% {
