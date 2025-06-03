@@ -526,12 +526,12 @@
                     mobileVideo.pause();
                 }
 				if (currentSection === 1) {
-                    const image = document.getElementById('desktop-fg');
+                    const image = document.getElementById('mobile-fg');
 					  
   if (image) {
     image.classList.add('animate');
   } else {
-    image = document.getElementById('mobile-fg');
+    image = document.getElementById('desktop-fg');
 					image.classList.add('animate');
   }
 					
