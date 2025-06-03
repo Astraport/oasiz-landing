@@ -380,10 +380,7 @@
         </section>
         
         <section id="section3" class="section">
-		<div class="bg-container">
-        <img id="desktop-bg" class="bg-image" src="images/desktop-bg.jpg">
-        <img id="mobile-bg" class="bg-image" src="images/mobile-bg.jpg">
-    </div>
+		
              <div class="container_product">
         <h2 class="title">Наша продукция применяется для:</h2>
         
@@ -432,6 +429,10 @@
         </div>
         
         <a href="https://oasis-trade.ru/catalog/shop/" class="view-all-btn">Смотреть всю продукцию</a>
+    </div>
+	<div class="bg-container">
+        <img id="desktop-bg" class="bg-image" src="images/desktop-bg.jpg">
+        <img id="mobile-bg" class="bg-image" src="images/mobile-bg.jpg">
     </div>
         </section>
         
