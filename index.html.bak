@@ -578,8 +578,15 @@
   }
 					
                 }
+const floatButton = document.getElementById('floatButton');
 
-            }
+        if (currentSection === 0) {
+            floatButton.classList.remove('show');
+        } else {
+            floatButton.classList.add('show');
+        }
+
+
             
             // Переход к определенной секции
             function goToSection(index) {
@@ -691,19 +698,5 @@
             });
         });
     </script>
-	<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const floatButton = document.getElementById('floatButton');
-  
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            floatButton.classList.add('show');
-        } else {
-            floatButton.classList.remove('show');
-        }
-    });
-
-});
-</script>
 </body>
 </html>
