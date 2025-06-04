@@ -72,21 +72,21 @@
         }
 
         #section2 {
-            /* Общий стиль для фона */
             transform: translateY(100%);
             overflow: hidden;
         }
 
         #section3 {
-            background: linear-gradient(135deg, #42e695, #3bb2b8);
             transform: translateY(200%);
 			justify-content: center;
             align-items: center;
         }
 
         #section4 {
-            background: linear-gradient(135deg, #a6c0fe, #f68084);
             transform: translateY(300%);
+        }
+		#section5 {
+            transform: translateY(400%);
         }
 
    /* Контейнеры для изображений */
@@ -390,7 +390,6 @@
   font-style: normal;
     font-weight: 900;
     line-height: 1.2;
-
     letter-spacing: .164px;
 position: absolute;
             top: 40%;
@@ -451,9 +450,7 @@ position: absolute;
     font-size: 64px;
     font-weight: 900;
     line-height: 1.2;
-
     letter-spacing: .164px;
-    text-transform: uppercase;
 position: absolute;
             top: 40%;
             left: 30%;
@@ -463,6 +460,7 @@ position: absolute;
 </head>
 <body>
     <div class="container">
+	
         <div class="video-container">
             <video id="desktop-video" class="background-video" autoplay muted playsinline loop>
                 <!-- Горизонтальное видео для десктопов -->
@@ -480,7 +478,7 @@ position: absolute;
 </div>
         </div>
         
-        <section id="section1" class="section">
+        
           
         </section>
         
@@ -555,9 +553,11 @@ position: absolute;
     </div>
         </section>
          <section id="section4" class="section">
-            <div class="section-content">
-                <img id="desktop-fg" class="fg-image" src="images/2025-06-04_16-37-13.png">
+		 <div class="section-content">
+                <h1>Реализованные проекты</h1>
+                <p>Раздел в подготовке...</p>
             </div>
+            
 			<div class="bg-container">
         <img id="desktop-bg" class="bg-image" src="images/desktop-bg.jpg">
         <img id="mobile-bg" class="bg-image" src="images/mobile-bg.jpg">
@@ -565,8 +565,7 @@ position: absolute;
         </section>
         <section id="section5" class="section">
             <div class="section-content">
-                <h1>Реализованные проекты</h1>
-                <p>Раздел в подготовке...</p>
+                <img id="desktop-fg" class="fg-image" src="/images/2025-06-04_16-37-13.png">
             </div>
 			<div class="bg-container">
         <img id="desktop-bg" class="bg-image" src="images/desktop-bg.jpg">
