@@ -456,11 +456,96 @@ position: absolute;
             left: 30%;
             transform: translate(0, -50%);
 }
+
+
+
+/* Стили модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    animation: scaleUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.modal-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modal-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: #e74c3c;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { 
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
     </style>
 </head>
 <body>
     <div class="container">
-	
+	<section id="section1" class="section">
         <div class="video-container">
             <video id="desktop-video" class="background-video" autoplay muted playsinline loop>
                 <!-- Горизонтальное видео для десктопов -->
@@ -477,9 +562,7 @@ position: absolute;
             </div>
 </div>
         </div>
-        
-        
-          
+
         </section>
         
         <section id="section2" class="section">
@@ -554,8 +637,43 @@ position: absolute;
         </section>
          <section id="section4" class="section">
 		 <div class="section-content">
-                <h1>Реализованные проекты</h1>
-                <p>Раздел в подготовке...</p>
+               <div class="container_product">
+        <h2 class="title">Реализованные проекты</h2>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="http://oasis-trade.ru/upload/images/p1.jpg" alt="Городское благоустройство">
+                <div class="product-overlay">
+                    <div class="product-title">Небоскреб<br>"Пушкин"</div>
+                </div>
+				<div class="product-description" style="display:none;">
+        Подробное описание проекта: инновационные технологии, сроки реализации, особенности архитектуры.
+				</div>
+            </div>
+            
+            <div class="product-card">
+                <img src="http://oasis-trade.ru/upload/images/p2.jpg" alt="Дренажные системы">
+                <div class="product-overlay">
+                    <div class="product-title">Ферма<br>"Кубанская буренка"</div>
+                </div>
+				<div class="product-description" style="display:none;">
+        Подробное описание проекта: инновационные технологии, сроки реализации, особенности архитектуры.
+				</div>
+            </div>
+            
+            <div class="product-card">
+                <img src="http://oasis-trade.ru/upload/images/p3.jpg" alt="Дорожное строительство">
+                <div class="product-overlay">
+                    <div class="product-title">Усадьба<br>Хлестакова</div>
+                </div>
+				<div class="product-description" style="display:none;">
+        Подробное описание проекта: инновационные технологии, сроки реализации, особенности архитектуры.
+				</div>
+            </div>
+          
+        </div>
+
+    </div>
             </div>
             
 			<div class="bg-container">
@@ -565,7 +683,7 @@ position: absolute;
         </section>
         <section id="section5" class="section">
             <div class="section-content">
-                <img id="desktop-fg" class="fg-image" src="/images/2025-06-04_16-37-13.png">
+                <img id="desktop-fg" class="fg-image" src="http://oasis-trade.ru/upload/images/2025-06-04_16-37-13.png">
             </div>
 			<div class="bg-container">
         <img id="desktop-bg" class="bg-image" src="images/desktop-bg.jpg">
@@ -586,6 +704,15 @@ position: absolute;
             <path style="fill: #FFFFFF;" fill="#FFF" d="M1036.898 176.091C923.562 62.677 772.859.185 612.297.114 281.43.114 12.172 269.286 12.039 600.137 12 705.896 39.633 809.13 92.156 900.13L7 1211.067l318.203-83.438c87.672 47.812 186.383 73.008 286.836 73.047h.255.003c330.812 0 600.109-269.219 600.25-600.055.055-160.343-62.328-311.108-175.649-424.53zm-424.601 923.242h-.195c-89.539-.047-177.344-24.086-253.93-69.531l-18.227-10.805-188.828 49.508 50.414-184.039-11.875-18.867c-49.945-79.414-76.312-171.188-76.273-265.422.109-274.992 223.906-498.711 499.102-498.711 133.266.055 258.516 52 352.719 146.266 94.195 94.266 146.031 219.578 145.992 352.852-.118 274.999-223.923 498.749-498.899 498.749z"></path>
         </svg></a></div>
       </div> 
+	  
+	  <div id="productModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <img class="modal-image" src="" alt="">
+        <h2 class="modal-title"></h2>
+        <p class="modal-description"></p>
+    </div>
+</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -599,6 +726,42 @@ position: absolute;
             let currentSection = 0;
             let isAnimating = false;
             let isMuted = true;
+			
+			const modal = document.getElementById('productModal');
+    const modalImage = modal.querySelector('.modal-image');
+    const modalTitle = modal.querySelector('.modal-title');
+    const modalDescription = modal.querySelector('.modal-description');
+    
+    // Обработчик клика по карточке
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', function() {
+            // Получаем данные из карточки
+            const imgSrc = this.querySelector('img').src;
+            const title = this.querySelector('.product-title').innerHTML;
+            
+            // Вставляем данные в модальное окно
+            modalImage.src = imgSrc;
+            modalTitle.innerHTML = title;
+            modalDescription.textContent = "Описание проекта"; // Добавьте реальное описание
+            
+            // Показываем модальное окно
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+        });
+    });
+    
+    // Закрытие по кнопке
+    modal.querySelector('.modal-close').addEventListener('click', closeModal);
+    
+    // Закрытие по клику вне окна
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+    
+    function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = ''; // Восстанавливаем скролл
+    }
 			
             // Инициализация видео
             function initVideo() {
@@ -765,5 +928,6 @@ const floatButton = document.getElementById('floatButton');
             });
         });
     </script>
+	
 </body>
 </html>
