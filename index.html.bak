@@ -534,6 +534,26 @@
             let isAnimating = false;
             let isMuted = true;
 			
+			const floatButton = document.getElementById('floatButton');
+    
+    // Показ кнопки при прокрутке
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            floatButton.classList.add('show');
+        } else {
+            floatButton.classList.remove('show');
+        }
+    });
+
+    // Прокрутка вверх
+    floatButton.querySelector('.float-button__link').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+			
             
             // Инициализация видео
             function initVideo() {
