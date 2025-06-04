@@ -385,6 +385,18 @@
     }
 	.main-slider__title {
             font-size: 26px;
+			color: #F7F9FB;
+    font-family: "PT Sans", sans-serif;
+  font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+
+    letter-spacing: .164px;
+    text-transform: uppercase;
+position: absolute;
+            top: 40%;
+            left: 10%;
+            transform: translate(-50%, -50%);
         }
 }
 /* whatsapp */
