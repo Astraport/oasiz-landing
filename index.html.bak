@@ -383,6 +383,9 @@
     #mobile-bg, #mobile-fg {
         display: block;
     }
+	.main-slider__title {
+            font-size: 26px;
+        }
 }
 /* whatsapp */
 .float-button {
