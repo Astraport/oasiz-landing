@@ -276,7 +276,6 @@
 			grid-auto-flow: column;
             grid-template-columns: (180px, 4fr);
             gap: 2px;
-			flex-wrap: nowrap;
             margin-bottom: 40px;
         }
 
@@ -350,6 +349,10 @@
         @media (max-width: 768px) {
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1px;
+            }
+			.products-grid-2 {
+                grid-template-columns: (180px, 1fr);
                 gap: 1px;
             }
             
