@@ -351,6 +351,10 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1px;
             }
+			.products-grid-2 {
+                grid-template-columns: (180px, 1fr);
+                gap: 1px;
+            }
             
             .product-card {
                 height: 100px;
