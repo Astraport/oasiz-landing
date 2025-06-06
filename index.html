@@ -273,7 +273,8 @@
         }
 		.products-grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 4fr));
+			grid-auto-flow: column;
+            grid-template-columns: (180px, 4fr);
             gap: 2px;
             margin-bottom: 40px;
         }
