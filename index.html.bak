@@ -742,8 +742,8 @@ position: absolute;
             // Вставляем данные в модальное окно
             modalImage.src = imgSrc;
             modalTitle.innerHTML = title;
-            modalDescription.textContent = "Описание проекта"; // Добавьте реальное описание
-            
+            modalDescription.textContent = this.querySelector('.product-description').innerHTML;
+
             // Показываем модальное окно
             modal.classList.add('show');
             document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
